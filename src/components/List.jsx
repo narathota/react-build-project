@@ -7,7 +7,11 @@ var List = React.createClass({
         var createItem = function (text, index) {
             return <ListItem key={index + text} text={text}/>;
         };
-        return (<ul>{this.props.items.map(createItem)}</ul>);
+        return (
+            <ul>
+                {this.props.items.map(createItem)}
+            </ul>
+        );
         //this.props <- read only
     }
 });
