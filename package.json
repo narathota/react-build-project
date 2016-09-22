@@ -1,0 +1,28 @@
+{
+  "name": "react-build-project",
+  "version": "1.0.0",
+  "description": "This is a dummy react project for testing purposes",
+  "main": "index.js",
+  "scripts": {
+    "start": "watchify src/main.jsx -v -t [ babelify --presets [ react ] ] -o public/js/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/narathota/react-build-project.git"
+  },
+  "author": "narathota.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/narathota/react-build-project/issues"
+  },
+  "homepage": "https://github.com/narathota/react-build-project#readme",
+  "dependencies": {
+    "babel-preset-react": "^6.11.1",
+    "babelify": "^7.3.0",
+    "react": "^15.3.2",
+    "react-bootstrap": "^0.30.3",
+    "react-dom": "^15.3.2",
+    "watchify": "^3.7.0"
+  }
+}
