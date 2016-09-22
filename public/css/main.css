@@ -1,0 +1,15 @@
+.sidebar{
+    background-color: #333333;
+    height: 100%;
+    color: #ffffff;
+}
+
+.mainbody{
+    /*background-color: #E4E4E4;*/
+    /*color: #ef3648;*/
+}
+
+.room{
+    /*background-color: #2b669a;*/
+    border: solid;
+}
