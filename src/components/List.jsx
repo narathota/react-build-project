@@ -1,18 +1,22 @@
 var React = require('react');
 var ListItem = require('./ListItem.jsx');
+var HTTPService = require('../services/httpservice');
 
 var List = React.createClass({
-    render: function () {
-
-        var createItem = function (text, index) {
-            return <ListItem key={index + text} text={text}/>;
-        };
-        return (
-            <ul>
-                {this.props.items.map(createItem)}
-            </ul>
-        );
-        //this.props <- read only
+    getInitialState: function () {
+        return {ingredients:[]};
+    },
+    componentWillMount: function () {
+        HTTPService.get('/ingredients')
+            .then(function (data) {
+                this.setState({ingredients: data});
+            }.bind(this));
+    },
+    render: function() {
+        var listItems = this.state.ingredients.map(function(item) {
+            return <ListItem key={item.id} ingredient={item.text} />;
+        });
+        return (<ul>{listItems}</ul>)
     }
 });
 
