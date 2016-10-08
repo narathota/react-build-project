@@ -2,6 +2,6 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 // var ListManager = require('./components/ListManager.jsx');
 var Routes = require('./Routes.jsx');
-var EmailField = require('./components/EmailField.jsx');
+var LeadCapture = require('./components/LeadCapture.jsx');
 
-ReactDOM.render(<EmailField/>, document.getElementById('ingredients'));
+ReactDOM.render(<LeadCapture/>, document.getElementById('leadCapture'));

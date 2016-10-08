@@ -17,6 +17,9 @@ var EmailField = React.createClass({
         }
 
     },
+    clear: function () {
+        this.setState({valid:true, value:""});
+    },
 
     render: function () {
         var formClass = this.state.valid ? "form-group" : "form-group has-error"
